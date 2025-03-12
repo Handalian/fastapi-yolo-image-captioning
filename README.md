@@ -66,7 +66,7 @@ Puedes probarlo en Swagger UI:
  ├──── 📜 app.py         # Código principal de la API
  ├──── 📜 description.py  # Lógica de análisis de imágenes
  ├──── 📜 detection.txt # Detección de imagen usando el modelo de IA
- ├──📜 requirements.txt # Dependencias del proyecto
+ ├── 📜 requirements.txt # Dependencias del proyecto
  ├── 📜 .env           # Variables de entorno (NO subir a GitHub)
  ├── 📜 README.md      # Este archivo
 ```
