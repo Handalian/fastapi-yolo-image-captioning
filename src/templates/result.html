@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Procesada</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Imagen Cargada y Procesada con Éxito!</h1>
+        <div class="image-container">
+            <img src="{{ file_path }}" alt="Imagen Cargada">
+        </div>
+        <h2>Descripción:</h2>
+        <p class="description">{{ description }}
+        <p><a href="/">Volver al inicio</a></p>
+    </div>
+</body>
+</html>

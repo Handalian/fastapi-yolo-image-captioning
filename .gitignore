@@ -1,0 +1,49 @@
+# ⛔ Ignorar archivos de Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# ⛔ Ignorar entornos virtuales
+venv/
+env/
+*.venv
+*.env
+
+# ⛔ Archivos de configuración y secretos
+.env
+config.json
+
+# ⛔ Archivos generados y compilados
+*.log
+*.sqlite3
+*.db
+*.sql
+*.pkl
+*.h5
+
+# ⛔ Ignorar imágenes y archivos de subida
+/static/uploads/
+*.jpg
+*.png
+
+# ⛔ Caché y archivos de depuración
+.DS_Store
+*.swp
+*.swo
+*.bak
+
+# ⛔ Archivos de dependencias y paquetes
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ⛔ Archivos de IDEs y editores de código
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+
+# ⛔ Archivos de Git y CI/CD temporales
+*.lock
+*.cache
+node_modules/

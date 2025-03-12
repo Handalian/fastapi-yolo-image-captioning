@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Imagen</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='favicon.ico') }}">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Subir una Imagen</h1>
+        <form action="/upload/" method="post" enctype="multipart/form-data">
+            <label for="file">Seleccionar imagen:</label>
+            <input type="file" name="file" id="file" accept="image/*" required>
+            <label for="language">Seleccionar idioma para la descripción:</label>
+            <select name="language" id="language">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+                <option value="de">Alemán</option>
+            </select>
+            <button type="submit">Subir Imagen</button>
+        </form>
+    </div>
+</body>
+</html>
