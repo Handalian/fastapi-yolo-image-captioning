@@ -1,8 +1,11 @@
+import spacy
 from detection import detect_objects
+
+nlp = spacy.load("en_core_web_sm")  # Cargar modelo de spaCy en inglés
 
 def describe_image(image_path: str) -> str:
     """
-    Genera una descripción en inglés basada en los objetos detectados en la imagen.
+    Genera una descripción en inglés basada en los objetos detectados en la imagen usando NLP.
     """
     detected_objects = detect_objects(image_path)
 
@@ -13,7 +16,11 @@ def describe_image(image_path: str) -> str:
     for obj in detected_objects:
         object_counts[obj] = object_counts.get(obj, 0) + 1
 
-    # Construcción de la descripción con todos los elementos detectados
-    description_parts = [f"{count} {obj}(s)" for obj, count in object_counts.items()]
-    
-    return "The image contains " + ", ".join(description_parts) + "."
+    # Generar una descripción fluida con NLP
+    description = "This image appears to contain "
+    for obj, count in object_counts.items():
+        obj_noun = nlp(obj)[0]  # Obtener el objeto como un token NLP
+        plural = obj_noun.text if count == 1 else obj_noun.text + "s"
+        description += f"{count} {plural}, "
+
+    return description.strip(", ") + "."
