@@ -77,6 +77,7 @@ Puedes probarlo en Swagger UI:
 - **Python** 
 - **FastAPI** (para la API web)
 - **YOLOv8** (para la detección de objetos)
+- **spacy** (para la descripción de la detección)
 - **Jinja2** (para renderizar templates HTML)
 - **Deep Translator** (para la traducción de los resultados)
 - **Uvicorn** (para correr el servidor)
